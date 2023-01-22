@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Section from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './Feedback/FeedbackOptions';
 
@@ -40,17 +41,22 @@ class App extends Component {
 
     return (
       <div>
-      
+        <Section title="Feedback caffe Expresso">
+          <FeedbackOptions
+            options={this.buttonGroup}
+            onLeaveFeedback={this.changeFeedback}
+          />
+        </Section>
 
-<FeedbackOptions options={this.buttonGroup} onLeaveFeedback={this.changeFeedback}/>
-
-        <Statistics
-          good={good}
-          neutral={neutral}
-          bad={bad}
-          total={this.countTotalFeedback()}
-          positivePercentage={this.countPositiveFeedbackPercentage()}
-        />
+        <Section title="Statistics">
+          <Statistics
+            good={good}
+            neutral={neutral}
+            bad={bad}
+            total={this.countTotalFeedback()}
+            positivePercentage={this.countPositiveFeedbackPercentage()}
+          />
+        </Section>
       </div>
     );
   }
