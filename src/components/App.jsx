@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Statistics from './Statistics/Statistics';
+import FeedbackOptions from './Feedback/FeedbackOptions';
 
 class App extends Component {
   static defaultProps = {};
@@ -39,11 +40,9 @@ class App extends Component {
 
     return (
       <div>
-        {this.buttonGroup.map(e => (
-          <button key={e} type="button" onClick={() => this.changeFeedback(e)}>
-            {e}
-          </button>
-        ))}
+      
+
+<FeedbackOptions options={this.buttonGroup} onLeaveFeedback={this.changeFeedback}/>
 
         <Statistics
           good={good}
