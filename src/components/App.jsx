@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Section from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './Feedback/FeedbackOptions';
+import css from "./App.module.css"
 
 class App extends Component {
   static defaultProps = {};
@@ -40,7 +41,7 @@ class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <div>
+      <div className={css.main}>
         <Section title="Feedback caffe Expresso">
           <FeedbackOptions
             options={this.buttonGroup}
