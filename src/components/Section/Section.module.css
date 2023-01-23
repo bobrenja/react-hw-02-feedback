@@ -9,6 +9,7 @@
   background-color: rgb(180, 240, 180);
   border: 1px solid green;
   border-radius: 10px 15px;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
 }
 
 .section:last-child {
