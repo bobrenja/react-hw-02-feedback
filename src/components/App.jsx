@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Section from './Section/Section';
 import Statistics from './Statistics/Statistics';
 import FeedbackOptions from './Feedback/FeedbackOptions';
-import css from "./App.module.css"
+import css from './App.module.css';
 
 class App extends Component {
   static defaultProps = {};
@@ -34,7 +34,7 @@ class App extends Component {
 
   countPositiveFeedbackPercentage = () => {
     const res = (this.state.good / this.countTotalFeedback()) * 100;
-    return res ? res.toFixed(1) : 0;
+    return res ? Number(res.toFixed(1)) : 0;
   };
 
   render() {
